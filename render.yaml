@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: russo-training-planner
+    env: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install --no-cache-dir -r backend/requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
